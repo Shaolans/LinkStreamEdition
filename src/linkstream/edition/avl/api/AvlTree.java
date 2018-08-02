@@ -1,6 +1,6 @@
 package linkstream.edition.avl.api;
 
-import linkstream.editing.avl.visualizer.GraphvizPrint;
+import linkstream.edition.avl.visualizer.GraphvizPrint;
 
 /**
  * @author Jay
@@ -35,8 +35,8 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
         return this.rootNode == null;
     }
     
-    public void printAvl() {
-    	GraphvizPrint.printAVL(rootNode);
+    public void printAvl(String name) {
+    	GraphvizPrint.printAVL(name, rootNode);
     }
     
     public Node<T> getRootNode(){
@@ -249,6 +249,7 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
 
         // right-left
         if (isRightHeavy(balanceValue) &&
+        		currentNode.getLeftChild() != null &&
                 dataToInsert.compareTo(currentNode.getLeftChild().getData()) < 0) {
             currentNode.setRightChild(insertNode(currentNode.getRightChild(), dataToInsert));
             return leftRotation(currentNode);

@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import linkstream.edition.structure.DiscreteLink;
-import linkstream.edition.structure.IntervalLink;
+import linkstream.edition.link.DiscreteLink;
+import linkstream.edition.link.IntervalLink;
 
 
 public class DataReader {

@@ -1,4 +1,4 @@
-package linkstream.edition.structure;
+package linkstream.edition.link;
 
 public class DiscreteLink {
 	private int time;

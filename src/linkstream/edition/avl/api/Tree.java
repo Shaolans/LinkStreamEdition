@@ -22,5 +22,5 @@ public interface Tree<T extends Comparable<T>> {
 
     boolean isEmpty();
     
-    public void printAvl();
+    public void printAvl(String name);
 }

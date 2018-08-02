@@ -1,4 +1,4 @@
-package linkstream.editing.avl.visualizer;
+package linkstream.edition.avl.visualizer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,17 +9,15 @@ import linkstream.edition.avl.api.Node;
 public class GraphvizPrint {
 	//permet d'attribuer les noeuds null du TH
 	private static int cptnull = 0;
-	private static int cptfile = 0;
 	/**
 	 * Ecrit dans un fichier la representation du Trie Hybride en langage DOT
 	 * @param file le fichier de sortie
 	 * @param th le TH
 	 */
-	public static <T extends Comparable<T>> void printAVL(Node<T> th) {
+	public static <T extends Comparable<T>> void printAVL(String name, Node<T> th) {
 		FileWriter fileWriter = null;
 		PrintWriter printWriter = null;
-		String file = "Graphviz/avl_t"+cptfile+".dot";
-		cptfile++;
+		String file = "Graphviz/avl_"+name+".dot";
 		try {
 			fileWriter = new FileWriter(file);
 			printWriter = new PrintWriter(fileWriter);

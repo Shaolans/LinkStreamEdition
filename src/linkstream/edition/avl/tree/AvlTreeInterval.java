@@ -1,11 +1,37 @@
 package linkstream.edition.avl.tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import linkstream.edition.avl.api.AvlTree;
 import linkstream.edition.avl.api.Node;
 
 public class AvlTreeInterval implements TreeInterval {
 	private AvlTree<Interval> delegate;
+	private int vertice1 = -1;
+	private int vertice2 = -1;
 	
+	
+	public int getVertice1() {
+		return vertice1;
+	}
+
+
+	public void setVertice1(int vertice1) {
+		this.vertice1 = vertice1;
+	}
+
+
+	public int getVertice2() {
+		return vertice2;
+	}
+
+
+	public void setVertice2(int vertice2) {
+		this.vertice2 = vertice2;
+	}
+
+
 	public AvlTreeInterval() {
 		delegate = new AvlTree<>();
 	}
@@ -46,10 +72,13 @@ public class AvlTreeInterval implements TreeInterval {
 	}
 
 
-	public void printAvl() {
-		delegate.printAvl();
+	public void printAvl(String name) {
+		delegate.printAvl(name);
 	}
-
+	
+	public void printAvl() {
+		delegate.printAvl(vertice1+""+vertice2);
+	}
 
 	public String toString() {
 		return delegate.toString();
@@ -80,6 +109,19 @@ public class AvlTreeInterval implements TreeInterval {
 	@Override
 	public Interval findEnd(int end) {
 		return findEnd(end, getRootNode());
+	}
+	
+	public List<Interval> getIntervals(){
+		List<Interval> l = new ArrayList<>();
+		getIntervals(l, getRootNode());
+		return l;
+	}
+	
+	public void getIntervals(List<Interval> l, Node<Interval> root) {
+		if(root == null) return;
+		l.add(root.getData());
+		getIntervals(l, root.getLeftChild());
+		getIntervals(l, root.getRightChild());
 	}
 
 }

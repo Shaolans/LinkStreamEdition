@@ -25,15 +25,15 @@ public class RunAvlTree {
         avlTree.insert(t);
         avlTree.insert(new Interval(9, 10));
         
-        avlTree.printAvl();
+        avlTree.printAvl("0");
         
         avlTree.insert(new Interval(11, 12));
         
-        avlTree.printAvl();
+        avlTree.printAvl("1");
         
         avlTree.insert(new Interval(14, 15));
         
-        avlTree.printAvl();
+        avlTree.printAvl("2");
         
         System.out.println(avlTree.getRootNode().getLeftChild());
         System.out.println(avlTree.findStart(1));
