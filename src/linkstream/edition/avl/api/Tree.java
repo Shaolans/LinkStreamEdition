@@ -1,4 +1,4 @@
-package linkstream.edition.avl.test;
+package linkstream.edition.avl.api;
 
 /**
  * @Author Jay
@@ -12,7 +12,9 @@ public interface Tree<T extends Comparable<T>> {
      * @param dataToRemove
      * */
     void remove(T dataToRemove);
-
+    
+    public Node<T> getRootNode();
+    
     /**
      * traverse the tree.
      * */

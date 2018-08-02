@@ -1,4 +1,4 @@
-package linkstream.edition.avl.test;
+package linkstream.edition.avl.api;
 
 /**
  * The node class for the tree.

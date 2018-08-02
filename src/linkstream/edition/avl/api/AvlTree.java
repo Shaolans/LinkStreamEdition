@@ -1,4 +1,4 @@
-package linkstream.edition.avl.test;
+package linkstream.edition.avl.api;
 
 import linkstream.editing.avl.visualizer.GraphvizPrint;
 
@@ -37,6 +37,10 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
     
     public void printAvl() {
     	GraphvizPrint.printAVL(rootNode);
+    }
+    
+    public Node<T> getRootNode(){
+    	return rootNode;
     }
 
     /*
@@ -432,6 +436,7 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
 
         System.out.print(currentNode + " --> ");
     }
+
 
 }
 

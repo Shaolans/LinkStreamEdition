@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import linkstream.edition.avl.test.Node;
+import linkstream.edition.avl.api.Node;
 
 public class GraphvizPrint {
 	//permet d'attribuer les noeuds null du TH
@@ -44,19 +44,11 @@ public class GraphvizPrint {
 		if(th.getLeftChild() != null) {
 			printWriter.println(name+" -> "+th.getLeftChild().hashCode());
 			GraphvizPrint.printAvlNode(printWriter, th.getLeftChild());
-		}else {
-			printWriter.println(name+" -> null"+cptnull);
-			printWriter.println("null"+cptnull+" [label=\"null\"]");
-			cptnull++;
 		}
 		
 		if(th.getRightChild() != null) {
 			printWriter.println(name+" -> "+th.getRightChild().hashCode());
-			GraphvizPrint.printAvlNode(printWriter, th.getLeftChild());
-		}else {
-			printWriter.println(name+" -> null"+cptnull);
-			printWriter.println("null"+cptnull+" [label=\"null\"]");
-			cptnull++;
+			GraphvizPrint.printAvlNode(printWriter, th.getRightChild());
 		}
 		
 	}
