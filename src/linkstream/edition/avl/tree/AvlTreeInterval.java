@@ -10,7 +10,11 @@ public class AvlTreeInterval implements TreeInterval {
 	private AvlTree<Interval> delegate;
 	private int vertice1 = -1;
 	private int vertice2 = -1;
+	private int size = 0; //warning, only working if the deletion and add are correct
 	
+	public int getSize() {
+		return size;
+	}
 	
 	public int getVertice1() {
 		return vertice1;
@@ -54,11 +58,13 @@ public class AvlTreeInterval implements TreeInterval {
 
 	public void insert(Interval data) {
 		delegate.insert(data);
+		size++;
 	}
 
 
 	public void remove(Interval dataToRemove) {
 		delegate.remove(dataToRemove);
+		size--;
 	}
 
 
