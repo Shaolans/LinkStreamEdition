@@ -1,0 +1,15 @@
+digraph G{
+1956725890 [label="Node{data=[6, 7]}"]
+1956725890 -> 356573597
+356573597 [label="Node{data=[1, 4]}"]
+356573597 -> null0
+null0 [label="null"]
+356573597 -> null1
+null1 [label="null"]
+1956725890 -> 1735600054
+356573597 [label="Node{data=[1, 4]}"]
+356573597 -> null2
+null2 [label="null"]
+356573597 -> null3
+null3 [label="null"]
+}
