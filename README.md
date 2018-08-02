@@ -3,7 +3,7 @@
 Project
 =======
 This is an implementation of a data structure for link stream edition, it uses an AVL tree to encode the interval, allowing editions on running time O(log(n)).
-I used a generic implementation of AVL tree taken from https://github.com/JWLee89/The-Coding-Delight/tree/master/Java/data-structures/AVL-tree, and adapted to my problem.
+I used a generic implementation of AVL tree taken from https://github.com/JWLee89/The-Coding-Delight/tree/master/Java/data-structures/AVL-tree, and adapted it to my problem.
 
 How to use
 ==========
