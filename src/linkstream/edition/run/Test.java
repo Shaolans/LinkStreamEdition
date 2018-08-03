@@ -30,18 +30,18 @@ public class Test {
 		ls.addLink(15, 20, 1, 5);
 		ls.addLink(24, 26, 1, 5);
 		
-		ls.getLinks().get("15").printAvl();
+		ls.getLinks().get("15").printAvl("avl_t0");
 		
 		ls.addLink(7, 9, 1, 5);
 		
-		ls.getLinks().get("15").printAvl();
+		ls.getLinks().get("15").printAvl("avl_t1");
 		
 		//ls.delLink(6, 10, 1, 5);
 		//ls.delLink(8, 10, 1, 5);
 		ls.delLink(6, 9, 1, 5);
 		ls.delLink(10, 10, 1, 5);
 		
-		ls.getLinks().get("15").printAvl();
+		ls.getLinks().get("15").printAvl("avl_t2");
 
 	}
 

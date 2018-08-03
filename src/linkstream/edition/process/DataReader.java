@@ -31,12 +31,6 @@ public class DataReader {
 		List<IntervalLink> lil = new ArrayList<>();
 		
 		l.sort((dl1,dl2)->{
-			if(dl1.getTime() < dl2.getTime()) {
-				return -1;
-			}
-			if(dl1.getTime() > dl2.getTime()) {
-				return 1;
-			}
 			if(dl1.getV1() < dl2.getV1()) {
 				return -1;
 			}
@@ -49,6 +43,13 @@ public class DataReader {
 			if(dl1.getV2() > dl2.getV2()) {
 				return 1;
 			}
+			if(dl1.getTime() < dl2.getTime()) {
+				return -1;
+			}
+			if(dl1.getTime() > dl2.getTime()) {
+				return 1;
+			}
+			
 			return 0;
 		});
 		
@@ -58,7 +59,6 @@ public class DataReader {
 		int start = l.get(0).getTime();
 		int end = l.get(0).getTime();
 		l.remove(0);
-		
 		for(DiscreteLink dl: l) {
 			if(!(end+1 == dl.getTime() && v1 == dl.getV1() && v2 == dl.getV2())) {
 				lil.add(new IntervalLink(start, end, v1, v2));
