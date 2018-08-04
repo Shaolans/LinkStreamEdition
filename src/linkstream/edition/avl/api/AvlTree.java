@@ -159,7 +159,8 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
      * @param currentNode the root node of the sub-tree
      *                    we will be examining
      * */
-    private Node<T> getMinNode(Node<T> currentNode) {
+    @SuppressWarnings("unused")
+	private Node<T> getMinNode(Node<T> currentNode) {
         while (currentNode.getLeftChild() != null) {
             currentNode = currentNode.getLeftChild();
         }
@@ -280,7 +281,8 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
      *
      * @param currentNode
      * */
-    private boolean isBalanced(Node<T> currentNode) {
+    @SuppressWarnings("unused")
+	private boolean isBalanced(Node<T> currentNode) {
         return Math.abs(getBalanceValue(currentNode)) < 2;
     }
 
@@ -288,7 +290,8 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
      * Check to see if current element is balanced based on balance value
      * @param balanceValue
      * */
-    private boolean isBalanced(int balanceValue) {
+    @SuppressWarnings("unused")
+	private boolean isBalanced(int balanceValue) {
         return balanceValue < 2 && balanceValue > -2;
     }
 
@@ -371,7 +374,8 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
      *
      * @param currentNode the node that we are currently at
      * */
-    private void inOrderTraversal(Node<T> currentNode) {
+    @SuppressWarnings("unused")
+	private void inOrderTraversal(Node<T> currentNode) {
 
         Node<T> leftChild = currentNode.getLeftChild();
 
@@ -422,7 +426,8 @@ public class AvlTree<T extends Comparable<T>> implements Tree<T> {
      *
      * @param currentNode the node that we are currently at
      * */
-    private void postOrderTraversal(Node<T> currentNode) {
+    @SuppressWarnings("unused")
+	private void postOrderTraversal(Node<T> currentNode) {
         Node<T> leftChild = currentNode.getLeftChild();
 
         if (leftChild != null) {

@@ -13,7 +13,7 @@ import linkstream.edition.process.LinkStream;
 
 public class DeletionRunningTimeRealData {
 	public static void main(String[] args) throws FileNotFoundException {
-		List<IntervalLink> lil = DataReader.construct_interval(DataReader.readFile("DataSet/enron.dyn"));
+		List<IntervalLink> lil = DataReader.construct_interval(DataReader.readFile("DataSet/rollernet.dyn"));
 		LinkStream ls = new LinkStream(lil);
 		AvlTreeInterval avli = null;
 		
@@ -37,7 +37,8 @@ public class DeletionRunningTimeRealData {
 			}
 		}
 		
-		for(int i = 0; i < 1000; i++) {
+		
+		for(int i = 0; i < 40; i++) {
 			value = (int)(Math.random()*lils.size());
 			todelete.add(lils.get(value));
 			lils.remove(value);
@@ -49,6 +50,7 @@ public class DeletionRunningTimeRealData {
 		}
 		Long fin = System.currentTimeMillis();
 		Long elapsed = fin - debut;
+
 		System.out.println(elapsed);
 	}
 }

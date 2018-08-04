@@ -124,7 +124,6 @@ public class LinkStream {
 	}
 	
 	public void printAllAvl() {
-		AvlTreeInterval avli;
 		for(Map.Entry<String, AvlTreeInterval> entry: links.entrySet()) {
 			entry.getValue().printAvl();
 		}

@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-import linkstream.edition.link.DiscreteLink;
 import linkstream.edition.link.IntervalLink;
 import linkstream.edition.process.LinkStream;
 
